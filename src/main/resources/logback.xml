@@ -1,0 +1,27 @@
+<configuration scan="true" scanPeriod="30 seconds">
+	
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./integrations.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- rollover daily -->
+			<fileNamePattern>Sam-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>1MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<maxHistory>14</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS,PST} [%thread] %-5level %logger{24} - %M - %msg%n%xEx{3}</pattern>
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="FILE" />
+	</root>
+	<logger name="com.dev" level="INFO"/>
+ 	<logger name="org.apache.http.wire" level="DEBUG"/>
+	<logger name="org.springframework.web.client" level="DEBUG" />
+
+</configuration>
