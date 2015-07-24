@@ -16,6 +16,7 @@ exports.config = {
 	 */
 
 	// For headless configuration
+	//npm install phantomjs --save-dev
 	capabilities : {
 		'browserName' : 'phantomjs',
 

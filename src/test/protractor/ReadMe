@@ -25,6 +25,8 @@ http://www.3pillarglobal.com/insights/using-the-protractor-automation-tool-to-te
 #Protractor with headless
 https://github.com/angular/protractor/blob/master/docs/browser-setup.md
 
+npm install phantomjs --save-dev
+
 Report generation:
 https://www.npmjs.com/package/protractor-html-screenshot-reporter
 $ npm install protractor-html-screenshot-reporter --save-dev

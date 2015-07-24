@@ -5,7 +5,7 @@ describe('Arithematic calculations', function() {
 	latestValueElement = element(by.binding('latest'));
 
 	beforeEach(function(){
-		browser.get('http://localhost:8080/GRest/');
+		browser.get('http://localhost:8080/Integrations/');
 	});
 
   it('should add one and two', function() {
