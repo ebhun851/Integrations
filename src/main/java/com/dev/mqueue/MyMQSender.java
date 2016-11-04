@@ -38,7 +38,7 @@ private static void sendMsg(int i) throws JMSException {
 	  
 	   
 	   
-	   cf.setHostName("dauschaap31.gap.dev");
+	   cf.setHostName("xyz_host");
 	   cf.setPort(1414);
 	   cf.setQueueManager("ENT01D");
 	   cf.setChannel("ENT01D.SVRCONN");
@@ -59,8 +59,6 @@ private static void sendMsg(int i) throws JMSException {
 	   // session.createReceiver(queue);
 	
 	   // long uniqueNumber = System.currentTimeMillis() % 1000;
-	   String inputXML = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><dc:EBO xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://service.gap.com/schemas/DCOutboundASN.xsd\" xmlns:dc=\"http://service.gap.com/schemas/DC\">"
-			   + "<esb:ESBHeader xmlns:esb=\"http://service.gap.com/schemas/ESBHeader\">" 
 			   + "<esb:VersionNbr>1.0</esb:VersionNbr>"
 			   + "<esb:BusinessEvent>"
 	   + "<esb:TransactionTypeCode>DC_DR_OBASN</esb:TransactionTypeCode> " 

@@ -36,8 +36,7 @@ public class QueueManager_OBASN {
     }
     
 	public static void main(String[] args) throws MQException {
-//		QueueManager_OBASN manager = new QueueManager_OBASN("paigpa01.gap.com", 1414, "ENT01P.SVRCONN", "ENT01P");
-		QueueManager_OBASN manager = new QueueManager_OBASN("dauschaap31.gap.dev", 1414, "ENT01D.SVRCONN", "ENT01D");
+		QueueManager_OBASN manager = new QueueManager_OBASN("xxx_host", 1414, "xyz_channel", "ENT01D");
 		System.out.println("Current queue depth: "+manager.depthOf("QC.FRN.LOGISTICS.OBASN.INPUT"));
 //		QC.FRN.LOGISTICS.OBASN.INPUT
 	}
